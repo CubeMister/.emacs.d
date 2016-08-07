@@ -256,3 +256,16 @@
 ;; Conclude init by setting up specifics for the current user
 (when (file-exists-p user-settings-dir)
   (mapc 'load (directory-files user-settings-dir nil "^[^#].*el$")))
+
+;; alpha
+(global-set-key (kbd "<f10>") 'loop-alpha)
+(setq alpha-list '((90 70) (100 100)))
+(defun loop-alpha ()
+(interactive)
+(let ((h (car alpha-list)))
+((lambda (a ab)
+(set-frame-parameter (selected-frame) 'alpha (list a ab))
+(add-to-list 'default-frame-alist (cons 'alpha (list a ab))))
+(car h) (car (cdr h)))
+(setq alpha-list (cdr (append alpha-list (list h))))))
+(loop-alpha)

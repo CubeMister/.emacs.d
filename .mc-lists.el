@@ -42,6 +42,7 @@
         cycle-spacing
         delete-blank-lines
         delete-indentation
+        delete-window
         dired-back-to-start-of-files
         down-list
         duplicate-current-line-or-region
@@ -195,6 +196,7 @@
         goto-line-with-feedback
         handle-switch-frame
         ido-switch-buffer
+        js2-mode-show-node
         js2r-extract-var
         js2r-rename-var
         jump-between-source-and-test-files
@@ -212,6 +214,8 @@
         shell
         skewer-load-buffer
         smex
+        split-window-right-and-move-there-dammit
+        undo-tree-visualize
         wgrep-change-to-wgrep-mode
         wgrep-finish-edit
         wgrep-save-all-buffers
